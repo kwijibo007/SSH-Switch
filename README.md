@@ -10,5 +10,7 @@ Please note: In order to allow the plugin to enable/disable SSH (Remote Login), 
 Using visudo, edit the sudoers file by adding the folling lines to the "User privilege specification" section. Replace "my_username" with the user running Indigo Server.
 
 my_username    ALL=(ALL) NOPASSWD: /usr/sbin/systemsetup -getremotelogin
+
 my_username    ALL=(ALL) NOPASSWD: /usr/sbin/systemsetup -setremotelogin on
+
 my_username    ALL=(ALL) NOPASSWD: /usr/sbin/systemsetup -f -setremotelogin off
