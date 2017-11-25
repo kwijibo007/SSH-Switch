@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<PluginConfig>
+	<!-- You can add a SupportURL element inside here if you want a context
+		 sensitive help link on the config UI - otherwise it will just link
+		 to the URL specified in the Info.plist. -->
+	<Field id="pathLabel" type="label" fontSize="small" fontColor="darkgray">
+		<Label>Enter the path to the systemsetup executable</Label>
+	</Field>
+	<Field id="path" type="textfield" defaultValue="/usr/sbin/systemsetup">
+		<Label>Path to systemsetup:</Label>
+	</Field>
+	<Field id="sshPollingLabel" type="label" fontSize="small" fontColor="darkgray">
+		<Label>Configure how often to poll SSH server status (in seconds)</Label>
+	</Field>
+	<Field id="sshPolling" type="textfield" defaultValue="5">
+		<Label>Polling interval:</Label>
+	</Field>
+	<Field id="enableIPLabel" type="label" fontSize="small" fontColor="darkgray">
+		<Label>Enable the lookup and detection of public IP address changes</Label>
+	</Field>
+	<Field id="enableIP" type="checkbox" defaultValue="true">
+		<Label>Enable public IP lookup:</Label>
+	</Field>
+	<Field id="ipPollingLabel" type="label" fontSize="small" fontColor="darkgray" visibleBindingId="enableIP" visibleBindingValue="true">
+		<Label>Configure how often to poll public IP address changes (in seconds). Restart plugin after changing this value</Label>
+	</Field>
+	<Field id="ipPolling" type="textfield" defaultValue="3600" visibleBindingId="enableIP" visibleBindingValue="true">
+		<Label>Polling interval:</Label>
+	</Field>
+	<Field id="ipDateFormatLabel" type="label" fontSize="small" fontColor="darkgray" visibleBindingId="enableIP" visibleBindingValue="true">
+		<Label>Select date format for the last detected public IP update</Label>
+	</Field>
+	<Field id="ipDateFormat" type="menu" defaultValue="uk" visibleBindingId="enableIP" visibleBindingValue="true">
+			<Label>Date format:</Label>
+				<List>
+					<Option value="uk">dd/mm/yyyy</Option>
+					<Option value="us">mm/dd/yyyy</Option>
+				</List>
+	</Field>
+	<Field id="loggingLabel" type="label" fontSize="small" fontColor="darkgray">
+		<Label>Configure logging</Label>
+	</Field>
+	<Field id="logLevel" type="menu" defaultValue="20">
+			<Label>Event Logging Level:</Label>
+				<List>
+					<Option value="10">Debugging Messages</Option>
+					<Option value="20">Informational Messages</Option>
+					<Option value="30">Warning Messages</Option>
+					<Option value="40">Error Messages</Option>
+					<Option value="50">Critical Errors Only</Option>
+				</List>
+	</Field>
+</PluginConfig>
