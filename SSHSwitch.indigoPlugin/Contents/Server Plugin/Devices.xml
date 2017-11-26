@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Devices>
+	<!-- This device illustrates how a plugin can inherit Indigo's sensor
+	device behavior including on/off and numerical value states and will
+	support Indigo and Indigo Touch's native UI for sensor type devices.
+	-->
+	<Device type="relay" id="SSHServer">
+		<Name>SSH Switch</Name>
+		<ConfigUI>
+			<Field id="infoLabel" type="label" fontSize="small" fontColor="darkgray">
+				<Label>There are device specific settings to configure. All settings can be found under the plugin settings.</Label>
+			</Field>
+		</ConfigUI>
+		<States>
+			<State id="Public_IP_Address">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Public IP Address</TriggerLabel>
+				<ControlPageLabel>Public IP Address</ControlPageLabel>
+			</State>
+			<State id="IP_Last_Update">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Last IP Update</TriggerLabel>
+				<ControlPageLabel>Last IP Update</ControlPageLabel>
+			</State>
+		</States>
+	</Device>
+</Devices>
